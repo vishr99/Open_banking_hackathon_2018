@@ -14,6 +14,8 @@ templates --
             | -form-new.html
             | -prediction_output.html
             | -welcome.html
+            
+            
 static  ----
             | - Light-blue.jpg
             | - style.css
