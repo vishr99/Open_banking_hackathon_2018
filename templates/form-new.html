@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Loan details form page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+    .verticalLine {
+    border-left: 1px solid #000080;
+    height: 360px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 10;
+    }
+    </style>
+
+</head>
+
+ <body class="form-new-page">
+
+   <header>
+      <a id="logo" href="/"><img src="static/Team_logo.png" alt="DTCC Logo"></a>
+   </header>
+
+   <section id="main-content">
+ 
+           <a id="Text-new"> <h2>Please enter loan details </h2> </a>
+            <div id="form">
+                <form method="POST" action="{{url_for('form_new') }}">
+                {{ form.csrf_token }}
+					<div class="row">
+                                            <!- firmname - >
+                        <div class="row-item">
+                            <a id="firmname_new"> <h3>{{ form.firmname.label }} </h3> </a>
+
+                            <a id="firmname_value_new">{{ form.firmname }}</a>
+
+                            <a id="firmname_error" class="row-item-error">{% for error in form.firmname.errors %}
+                                <span style="color:red">{{error}}</span>
+                            {% endfor %} </a>
+                        </div>
+
+                                            <!- itr - >
+                        <div class="row-item">
+                            <a id="itr"><h3>{{ form.itr.label }} </h3></a>
+
+                            <a id="itr_value">{{ form.itr }}</a>
+
+                            <a id="itr_error" class="row-item-error">{% for error in form.itr.errors %}
+                                <span style="color:red">{{error}}</span>
+                            {% endfor %} </a>
+                        </div>
+
+
+                                            <!- kycdocs - >
+                        <div class="row-item">
+                            <a id="kycdocs"> <h3>{{ form.kycdocs.label }} </h3> </a>
+
+                            <a id="kycdocs_value">{{ form.kycdocs }}</a>
+
+                            <a id="kycdocs_error" class="row-item-error">{% for error in form.kycdocs.errors %}
+                                <span style="color:red">{{error}}</span>
+                            {% endfor %} </a>
+                        </div>
+
+
+                                            <!- bankstmts - >
+                        <div class="row-item">
+                            <a id="bankstmts"> <h3>{{ form.bankstmts.label }} </h3> </a>
+
+                            <a id="bankstmts_value">{{ form.bankstmts }}</a>
+
+                            <a id="bankstmts_error" class="row-item-error">{% for error in form.bankstmts.errors %}
+                                <span style="color:red">{{error}}</span>
+                            {% endfor %} </a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+										 <!- existing_loan_value - >
+                        <div class="row-item">
+                            <a id="existing_loan_value"> <h3>{{ form.existing_loan_value.label }} </h3> </a>
+
+                            <a id="existing_loan_value_value">{{ form.existing_loan_value }}</a>
+
+                            <a id="existing_loan_value_error" class="row-item-error">{% for error in form.existing_loan_value.errors %}
+                                <span style="color:red">{{error}}</span>
+                            {% endfor %} </a>
+                        </div>
+
+
+
+                                             <!- loan_pending_term - >
+                        <div class="row-item">
+                            <a id="loan_pending_term"> <h3>{{ form.loan_pending_term.label }} </h3> </a>
+
+                            <a id="loan_pending_term_value">{{ form.loan_pending_term }}</a>
+
+                            <a id="loan_pending_term_error" class="row-item-error">{% for error in form.loan_pending_term.errors %}
+                                <span style="color:red">{{error}}</span>
+                            {% endfor %} </a>
+                        </div>
+
+
+                                             <!- cibil_score - >
+                        <div class="row-item">
+                            <a id="cibil_score"> <h3>{{ form.cibil_score.label }} </h3> </a>
+
+                            <a id="cibil_score_value">{{ form.cibil_score }}</a>
+
+                            <a id="cibil_score_error" class="row-item-error">{% for error in form.cibil_score.errors %}
+                                <span style="color:red">{{error}}</span>
+                            {% endfor %} </a>
+                        </div>
+
+
+                                             <!- assets - >
+                        <div class="row-item">
+                            <a id="assets"> <h3>{{ form.assets.label }} </h3> </a>
+
+                            <a id="assets_value">{{ form.assets }}</a>
+
+                            <a id="assets_error" class="row-item-error">{% for error in form.assets.errors %}
+                                <span style="color:red">{{error}}</span>
+                            {% endfor %} </a>
+                        </div>
+
+
+                                             <!- loan_requirement - >
+                        <div class="row-item">
+                            <a id="loan_requirement"> <h3>{{ form.loan_requirement.label }} </h3> </a>
+
+                            <a id="loan_requirement_value">{{ form.loan_requirement }}</a>
+
+                            <a id="loan_requirement_error" class="row-item-error">
+                                {% for error in form.loan_requirement.errors %}
+                                    <span style="color:red">{{error}}</span>
+                                {% endfor %}
+                            </a>
+                        </div>
+
+					</div>
+					
+					<div class="row">
+                        <a id="submit_new"> <input type="submit" value="SUBMIT"></a>
+                    </div>
+                </form>
+            </div>
+
+   </section>
+
+
+   <footer>
+      &copy; 2018 - Tech Brunch Team (Capgemini)
+    </footer>
+</body>
+</html>

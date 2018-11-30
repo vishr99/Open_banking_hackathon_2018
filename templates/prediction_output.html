@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Loan Prediction output page </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body style="background-image:url('static/Light-blue.jpg')">
+    <!-- /header starts-->
+    <header>
+      <a id="logo" href="welcome"><img src="static/Team_logo.png" alt="DTCC Logo"></a>
+    </header>
+    <!-- /header ends-->
+
+
+    <!-- /main-content starts-->
+    <section id="main-content">
+    <!--<a id="brand" href="welcome.html"><img src="static/brand.png" alt="DTCC brand"> </a>-->
+    <a id="welcome" > <h2>LOAN APPLICATION PREDICTION.</h2></a> <br>
+    <a id="welcome1" > <h3>Risk level of the loan application for {{firmname}} :-- {{ loan_risk }}</h3></a>
+	
+    <!--<a id="next_button" href="login.html"> <button type="button" style="height:40px; width:70px"><strong>NEXT</strong></button> </a>-->
+    <!--<a href="form-new" class="button button2">NEXT</a> -->
+
+
+
+
+
+    </section>
+    <!-- /main-content ends -->
+
+
+    <!-- /footer starts-->
+    <footer>
+      &copy; 2018 - Tech Brunch Team (Capgemini)
+    </footer>
+    <!-- /footer ends -->
+  </body>
+</html>
