@@ -2,12 +2,13 @@ from flask import Flask, render_template,request,redirect,url_for,flash
 from flask_wtf import FlaskForm ,Form
 from wtforms import StringField, PasswordField ,SubmitField, RadioField,SelectField,validators ,IntegerField,FloatField
 from wtforms.validators import InputRequired,data_required
-
 from HACKATHON_UPDATED.latest_loan_approval_predict import loan_predict
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'Thisisasecret!'
 
+# creating the framework for the input form fields for loan details.
 class LoginForm(FlaskForm):
     firmname = StringField('Firm Name',validators=[InputRequired('* Username is a mandatory field')])
     itr = FloatField('ITR (In million INR)', validators=[InputRequired('* Username is a mandatory field')])
@@ -19,6 +20,7 @@ class LoginForm(FlaskForm):
     assets = FloatField ('Assets (mn INR)' , validators=[InputRequired('* Username is a mandatory field')])
     loan_requirement = FloatField ('Loan requirement (mn INR)' , validators=[InputRequired('* Username is a mandatory field')])
 
+# Creating routes for landing pages based on pages hit.
 
 @app.route("/")
 @app.route("/welcome")
@@ -27,8 +29,8 @@ def home():
 
 
 @app.route('/form-new',methods=['GET', 'POST'])
-
 def form_new():
+    #Instantiate the form with all form fields in it.
     form = LoginForm()
 
     if form.validate_on_submit():
@@ -46,7 +48,7 @@ def form_new():
 
                 input_list = [[itr, kycdocs, bankstmts, existing_loan_value, loan_pending_term, cibil_score, assets,
                                loan_requirement]]
-                #print(input_list)
+
                 loan_risk_score = loan_predict(input_list)
                 if loan_risk_score == 0 :
                     loan_risk = 'LOW'
