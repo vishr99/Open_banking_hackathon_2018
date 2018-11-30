@@ -1,0 +1,220 @@
+#main-content {
+  border-top: 1px solid #000080;
+  padding: 100px 0;
+  margin: 20px 0;
+  text-align: center;
+}
+
+#logo {
+  width: 100px;
+  display: inline-block;
+}
+
+#logo img {
+  width: 100%;
+}
+
+#brand {
+ width: 25%; display: inline-block;
+}
+
+#brand img {
+ width: 100%;
+}
+
+#welcome {
+  color: #000080;
+}
+
+#welcome1 {
+  color: #000080;
+}
+
+#welcome2 {
+  color: #000080;
+  position: absolute;
+  top:320px;left :550px;
+}
+
+
+a.button2 {
+    background-color: #000080;
+    font-size: 20px;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+a.button2:hover {
+    background-color: white;
+    font-size: 20px;
+    color: #000080;
+    cursor: pointer;
+}
+div.radio_form
+{
+    display: block;
+    text-align: center;
+}
+
+
+
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #000080;
+    padding: 10px 0;
+    color: #000080;
+}
+
+.centered-parent {
+    white-space: nowrap;
+}
+
+#centered-parent:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.centered-child {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+#Text-new {
+  color: #000080;
+}
+
+#firmname_new {
+  color: #000080;
+}
+
+#firmname_value_new {
+  color: #000080;
+}
+
+#firmname_error {
+}
+
+#itr {
+  color: #000080;
+}
+
+#itr_value {
+  color: #000080;
+}
+
+#itr_error {
+}
+
+
+#kycdocs {
+  color: #000080;
+}
+
+#kycdocs_value {
+  color: #000080;
+}
+
+#kycdocs_error {
+}
+
+
+#bankstmts {
+  color: #000080;
+}
+
+#bankstmts_value {
+  color: #000080;
+}
+
+#bankstmts_error {
+}
+
+#existing_loan_value {
+  color: #000080;
+}
+
+#existing_loan_value_value {
+  color: #000080;
+}
+
+#existing_loan_value_error {
+}
+
+
+#loan_pending_term {
+  color: #000080;
+}
+
+#loan_pending_term_value {
+  color: #000080;
+}
+
+#loan_pending_term_error {
+}
+
+#cibil_score {
+  color: #000080;
+}
+
+#cibil_score_value {
+  color: #000080;
+}
+
+#cibil_score_error {
+}
+
+#assets {
+  color: #000080;
+}
+
+#assets_value {
+  color: #000080;
+}
+
+#assets_error {}
+
+#loan_requirement {
+  color: #000080;
+}
+
+#loan_requirement_value {
+  color: #000080;
+}
+
+#loan_requirement_error {}
+
+#submit_new  {
+  border: none;
+  padding: 14px 50px;
+  width: 500px;
+}
+
+.row {
+    padding: 10px 0;
+}
+.row-item {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 45px;
+}
+
+.row-item-error {
+    position: absolute;
+    left: 0; bottom: 0;
+    font-size: 75%;
+}
+
+.form-new-page {
+    background: url('../static/Light-blue.jpg');
+}
+
+.form-new-page #main-content {
+    padding: 20px 0;
+}
